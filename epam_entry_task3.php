@@ -28,7 +28,7 @@ function checkInput($str) {
 	$nameExt=explode('.', $str);// divide the string into two parts: file name and file extension
 	$name = $nameExt[0];
 	$extension = $nameExt[1];
-	if ($name == '' || $extension == '' || strpos($str, '.') == NULL) return FALSE;// return FALSE in eithe case: file name is empty, file extension is empty, no dots contained in the string (cannot separate file name from its extension) 
+	if ($name == '' || $extension == '' || strpos($str, '.') == NULL) return FALSE;// return FALSE in either case: file name is empty, file extension is empty, no dots contained in the string (cannot separate file name from its extension) 
 	if (strlen($str) > 200) {// if the string is too long, 
 		$name = substr($name, 0, 200-strlen($extension)-1);// remove as little as possible from the filename (the extension is already at 50 characters or less) 
 	}
