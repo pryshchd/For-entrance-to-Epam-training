@@ -1,0 +1,16 @@
+<?php
+$opentag='<?php';
+$dollar='$';
+$quote="'";
+$dblquote='"';
+$eval='eval($evalcontents);';
+$evalcontents='echo
+"$opentag
+{$dollar}opentag=$quote$opentag$quote;
+{$dollar}dollar=$quote$dollar$quote;
+{$dollar}quote=$dblquote$quote$dblquote;
+{$dollar}dblquote=$quote$dblquote$quote;
+{$dollar}eval=$quote$eval$quote;
+{$dollar}evalcontents=$quote$evalcontents$quote;
+$eval";';
+eval($evalcontents);
